@@ -2,6 +2,15 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+iziToast.show({
+  title: "Готово!",
+  message: "iziToast підключено через npm",
+});
+flatpickr("#datetime-picker", {
+  enableTime: true,
+  time_24hr: true,
+  dateFormat: "Y-m-d H:i",
+});
 
 const datetimePicker = document.querySelector("#datetime-picker");
 const startButton = document.querySelector("[data-start]");
